@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "moumou": {
+    "shared-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/moumou",
+            "outputPath": "dist/shared-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "moumou:build"
+            "browserTarget": "shared-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "moumou:build:production"
+              "browserTarget": "shared-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "moumou:build"
+            "browserTarget": "shared-app:build"
           }
         },
         "test": {
@@ -105,15 +105,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "moumou:serve"
+            "devServerTarget": "shared-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "moumou:serve:production"
+              "devServerTarget": "shared-app:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "moumou"
+  "defaultProject": "shared-app"
 }
